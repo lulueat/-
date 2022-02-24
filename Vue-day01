@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 指令 以v-开始，类似自定义属性 -->
+    <!-- v-text 填充纯文本，v-pre显示原始信息，v-once 只编译一次（当显示信息后续不需要修改时使用），v-mode双向绑定 -->
+
+    <div id="app">
+        <div>{{msg}}</div>
+    </div>
+    <!-- 事件函数调用，直接绑定函数名称 -->
+    <button @click='handle'>点击</button>
+    <!--  如果要传递参数，为@click=‘函数名（“参数”，$event）’-->
+    <script type="text/javascript" src=""></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 1
+            },
+            methods: {
+                handle: function() {
+                    tis.num++;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
